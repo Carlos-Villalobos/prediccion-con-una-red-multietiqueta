@@ -157,7 +157,8 @@ def vista_coocurrencia(Y):
         x=alt.X("b:N", sort=ORDEN_SALIDAS, title=None, axis=alt.Axis(labelAngle=-40, labelLimit=150)),
         y=alt.Y("a:N", sort=ORDEN_SALIDAS, title=None),
         color=alt.Color("log2:Q", title="Lift", scale=alt.Scale(
-            domain=[-2, 0, 2], range=[AZUL, GRIS, ROJO]),
+            domain=[-2, 0, 2], range=[AZUL, GRIS, ROJO],
+            interpolate="rgb"),  # el HCL por defecto mete beige y morado entre los extremos
             legend=alt.Legend(values=[-2, -1, 0, 1, 2], labelExpr=(
                 "{'-2':'÷4','-1':'÷2','0':'×1','1':'×2','2':'×4'}[datum.value]"))),
         tooltip=[alt.Tooltip("a:N", title="Desenlace"), alt.Tooltip("b:N", title="Con"),
