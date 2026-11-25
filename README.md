@@ -3,7 +3,10 @@
 Clasificación multietiqueta con una red neuronal en PyTorch,
 con el dataset *Myocardial infarction complications* (UCI, CC BY 4.0).
 
-Código común a dos trabajos de máster: Sistemas Conexionistas (memoria) y Analítica Visual (demo).
+Código común a dos trabajos de máster:
+
+- **Sistemas Conexionistas:** la red, su entrenamiento y su evaluación.
+- **Analítica Visual:** las visualizaciones en Altair, en desarrollo. Esta parte seguirá cambiando y puede reorganizarse en carpetas.
 
 ## Instalación
 
@@ -20,7 +23,7 @@ uv pip sync requirements.txt --python .venv/bin/python
 .venv/bin/python -m pytest tests -q
 .venv/bin/python -m src.entrenar
 .venv/bin/python -m src.evaluar
-.venv/bin/python -m src.visualizar
+.venv/bin/python -m src.visualizar   # solo Analítica Visual
 ```
 
 `src.entrenar --rapido` recorre el flujo en menos de un minuto y escribe en `salidas/prueba/`.
@@ -40,11 +43,11 @@ Para estimar el riesgo de pacientes nuevos, tras `src.entrenar`:
 | `src/entrenar.py` | Búsqueda, validación cruzada, importancia y experimento de fugas |
 | `src/evaluar.py` | Métricas de test, bootstrap y comparación de modelos |
 | `src/predecir.py` | Riesgo de pacientes nuevos con el flujo del modelo final |
-| `src/visualizar.py` | Figuras de la memoria y demo HTML |
+| `src/visualizar.py` | Analítica Visual: figuras y demo HTML en Altair |
 | `tests/` | Integridad de datos y ausencia de fugas |
-| `salidas/` | Métricas y predicciones generadas |
-| `salidas/demo.html` | Demo de Analítica Visual, autónoma y sin conexión |
-| `salidas/figuras/` | Figuras de la memoria |
+| `salidas/` | Métricas, predicciones y registros generados |
+| `salidas/demo.html` | Analítica Visual: demo autónoma y sin conexión |
+| `salidas/figuras/` | Analítica Visual: figuras estáticas |
 
 ## Decisiones importantes
 
