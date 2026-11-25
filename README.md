@@ -44,6 +44,7 @@ Para estimar el riesgo de pacientes nuevos, tras `src.entrenar`:
 | `src/evaluar.py` | Métricas de test, bootstrap y comparación de modelos |
 | `src/predecir.py` | Riesgo de pacientes nuevos con el flujo del modelo final |
 | `src/visualizar.py` | Analítica Visual: figuras y demo HTML en Altair |
+| `Visualizacion/` | Analítica Visual: preparación de los datos, datasets y decisiones |
 | `tests/` | Integridad de datos y ausencia de fugas |
 | `salidas/` | Métricas, predicciones y registros generados |
 | `salidas/demo.html` | Analítica Visual: demo autónoma y sin conexión |
